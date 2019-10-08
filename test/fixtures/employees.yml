@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  emp_id: MyString
+  name: MyString
+  salary: 
+  salary: 
+  rating: 1.5
+
+two:
+  emp_id: MyString
+  name: MyString
+  salary: 
+  salary: 
+  rating: 1.5
