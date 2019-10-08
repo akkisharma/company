@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :employees, only: [:show, :create] do
+    		get :mark_resigned
       	collection do
       		get :ratio_salary
       	end

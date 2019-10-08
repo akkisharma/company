@@ -11,5 +11,8 @@ class Employee < ApplicationRecord
   validates_presence_of :name, :email, :salary, :rating, :role
   validates_uniqueness_of :email
 
+  ## scopes
+  default_scope { where(is_resigned: false)}
+
 end
 

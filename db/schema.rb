@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_08_083254) do
+ActiveRecord::Schema.define(version: 2019_10_08_101829) do
 
   create_table "employees", force: :cascade do |t|
     t.string "name"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2019_10_08_083254) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "ancestry"
+    t.boolean "is_resigned", default: false
     t.index ["ancestry"], name: "index_employees_on_ancestry"
   end
 

@@ -30,6 +30,13 @@ class Api::V1::EmployeesController < ApplicationController
   end
 
 
+  ## 4 Create an rest endpoint which mark an employee resigned and delete the employee from the organization hierarchy. On removal of Managerial role all reportee should report to his/her reporter.
+  def mark_resigned
+  	employee = Employee.find(params[:employee_id]) rescue nil
+  	is_updated = employee.update_attribute(:is_resigned, true)
+  	render json: {status: "SUCCESS", message: "Markd Resigned", data: is_updated.present?}, status: :ok
+  end
+
   private
 
   def employee_params
